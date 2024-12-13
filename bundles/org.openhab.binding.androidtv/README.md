@@ -26,9 +26,10 @@ This could cause undesired effects.
 
 This binding does not require any special configuration files.
 
-This binding does require a PIN login process (documented below) upon first connection.
+This binding does require a PIN login process (documented below) to be installed on the device upon first connection.
 
-This binding requires GoogleTV to be installed on the device (https://play.google.com/store/apps/details?id=com.google.android.videos)
+This binding requires [GoogleTV](https://play.google.com/store/apps/details?id=com.google.android.videos) to be installed on the device.
+The binding also requires the [Android TV Remote Service](https://play.google.com/store/apps/details?id=com.google.android.tv.remote.service) to be running and up to date on the device.
 
 ## Thing Configuration
 
@@ -221,6 +222,12 @@ If you are on a ShieldTV or PhilipsTV you must run that process a second time to
 This completes the PIN process.
 
 Upon reconnection (either from reconfiguration or a restart of OpenHAB), you should now see a message of "Login Successful" in openhab.log
+
+## Troubleshooting
+
+Some devices come with an outdated version of the Android TV Remote Service, and do not update this service automatically. So in case the PIN Process does not result in a PIN to be shown
+on the screen (and the log does shos the message "GoogleTV version on device needs to be updated"), open the Google Play Store on the device, search for the Android TV Remote Service
+and press "Update" to update the service manually.
 
 ## Full Example
 
